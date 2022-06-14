@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form [formGroup]="EventForm">
+  <div class="form-group">
+    <label for="eventname">eventname :</label>
+    <input  type="text" name="eventname" placeholder="Please enter you eventname" id="eventname" formControlName="eventname" class="form-control" maxlength="100">
+  </div>
+
+  <div>
+    <button type="submit" class="btn btn-success float-left-bottom" (click)="executeEvent(EventForm)">Start</button>
+  </div>
+
+  <div>
+  <button type="button" class="btn btn-success float-left-bottom" (click)="createEvent()">Create New Event</button>
+  </div>
+
+  <div>
+    <button type="button" class="btn btn-success float-left-bottom" (click)="getEvents()">Get Events</button>
+    </div>
+</form>
+<div *ngIf="events">
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+  <table>
+   <thead>
+     <tr>
+       <th>eventName</th>
+       <th>startTime</th>
+       <th>processCompletionTime</th>
+       <th>status</th>
+       <th>endTime</th>
+       <th></th>
+     </tr>
+   </thead>
+   <tbody>
+     <!-- <div> -->
+       <tr *ngFor = "let event of events">
+       <td>{{event.eventName}}</td>
+       <td>{{event.startTime}}</td>
+       <td>{{event.processCompletionTime}}</td>
+       <td>{{event.status}}</td>
+       <td>{{event.endTime}}</td>
+     </tr>
+     <!-- </div> -->
+    
+   </tbody>
+  </table>
+ </div>
+</div>
+</body>
+</html>
+<router-outlet></router-outlet>

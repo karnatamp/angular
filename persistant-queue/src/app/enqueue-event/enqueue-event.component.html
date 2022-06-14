@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form [formGroup]="EventForm">
+  <div class="form-group">
+  
+    
+    <label for="eventName">eventName :</label>
+    <input  type="text" name="eventName" placeholder="Please enter you eventName" id="eventName" formControlName="eventName" class="form-control" maxlength="100">
+    
+    <label for="processCompletionTime">processCompletionTime :</label>
+    <input  type="number" name="processCompletionTime" placeholder="Please enter you processCompletionTime" id="processCompletionTime" formControlName="processCompletionTime" class="form-control" maxlength="100">
+    
+    <label for="eventPriority">eventPriority :</label>
+    <input  type="number" name="eventPriority" placeholder="Please enter you eventPriority" id="eventPriority" formControlName="eventPriority" class="form-control" maxlength="100">
+
+    </div>
+    <div>
+    <button type="submit" class="btn btn-success float-left-bottom" (click)="createEvent(EventForm)"> create Event</button>
+    </div>
+</form>
+</body>
+</html>
