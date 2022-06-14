@@ -1,7 +1,7 @@
 # angular
  Persistent queue using typescript for Frontend and java Spring boot for backend.
  
-persistentqueue: Backend(using Java Spring Boot for DB connection)
+persistantqueue: Backend(using Java Spring Boot for DB connection)
 
 
 persistant-queue: FrontEnd(Typescript)
