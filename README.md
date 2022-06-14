@@ -2,6 +2,8 @@
  Persistent queue using typescript for Frontend and java Spring boot for backend.
  
 persistentqueue: Backend(using Java Spring Boot for DB connection)
+
+
 persistant-queue: FrontEnd(Typescript)
 
 Future Work: implementation of event priority based execution,alert messagesto select which one to execute  when same priority level event occur.
